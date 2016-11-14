@@ -1,0 +1,112 @@
+$blue: #056ef0;
+$red: red;
+$column: 25%;
+$height: 500px;
+$gray: #222;
+
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1200px;
+$break-america: 1776px;
+
+$base-fs: 16px;
+$fs-small: 12px;
+$base-blockquote: 23px;
+
+$fw-light: 100;
+$fw-regular: normal;
+$fw-medium: 500;
+$fw-bold: 900;
+
+$default-border: 1px solid rgba(0,0,0,0.25);
+
+@define-mixin cover {
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  -ms-behavior: url(/backgroundsize.min.htc);
+}
+
+@define-mixin center $name {
+    @media screen and (min-width: $break-small) {
+      width:$(name)%;
+      margin-left:auto;
+      margin-right:auto;
+  }
+}
+@define-mixin padding-mobile {
+  padding-left:15px;
+  padding-right:15px;
+  @media screen and (min-width:$break-small) {
+    padding-left:0;
+    padding-right: 0;
+  } 
+}
+@define-mixin reverse-padding-mobile {
+  padding-left:0px;
+  padding-right:0px;
+  @media screen and (min-width:$break-small) {
+    padding-left:15px;
+    padding-right: 15px;
+  } 
+}
+@define-mixin margin-mobile {
+  margin-left:15px;
+  margin-right:15px;
+  @media screen and (min-width:$break-small) {
+    margin-left:0;
+    margin-right: 0;
+  } 
+}
+@define-mixin text-center-mobile {
+    text-align:center;
+    @media screen and (min-width:$break-small) {
+        text-align:left;   
+    }
+}
+@define-mixin text-center-desktop {
+    text-align:left;
+    @media screen and (min-width:$break-small) {
+        text-align:center;  
+    }
+}
+header {
+    text-align:center;
+    h1 {
+
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+    h3 {
+        
+    }
+}
+
+.navbar, .sticky-wrapper {
+    z-index:9999 !important;
+}
+.navbar-nav {
+    @media screen and (min-width:$break-small) {
+        float:none;
+        text-align:center;
+    }
+    li {
+        @media screen and (min-width:$break-small) {
+            float:none;
+            display:inline-block;
+        }
+    }
+}
+.grid {
+    .grid-item {
+        text-align:center;
+        @media screen and (min-width:$break-small) {
+            width:25%;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+header {
+    text-align:center;
+}
+header h1 {}
+header h2 {
+    text-transform: uppercase;
+}
+header h3 {}
+
+.navbar, .sticky-wrapper {
+    z-index:9999 !important;
+}
+@media screen and (min-width:768px) {
+    .navbar-nav {
+        float:none;
+        text-align:center;
+    }
+}
+@media screen and (min-width:768px) {
+    .navbar-nav li {
+        float:none;
+        display:inline-block;
+    }
+}
+.grid .grid-item {
+    text-align:center;
+}
+@media screen and (min-width:768px) {
+    .grid .grid-item {
+        width:25%;
+    }
+}
